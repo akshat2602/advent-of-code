@@ -1,5 +1,3 @@
-// Separate input by columns
-// 1st column goes to input1, 2nd column goes to input2
 fn get_input(input: &str) -> (Vec<i32>, Vec<i32>) {
     let mut input1 = Vec::new();
     let mut input2 = Vec::new();
@@ -14,7 +12,6 @@ fn get_input(input: &str) -> (Vec<i32>, Vec<i32>) {
 }
 
 fn main() {
-    // Read input from file
     let path = std::path::Path::new("2024/day-1/input.txt");
     let input = std::fs::read_to_string(path).unwrap();
 
@@ -25,13 +22,33 @@ fn main() {
     let mut input2 = input2;
     input2.sort();
 
-    println!("Distance: {}", calc_distance(input1, input2));
+    println!("Distance: {}", calc_distance(&input1, &input2));
+    println!("Similarity Score: {}", calc_sim_score(&input1, &input2));
 }
 
-fn calc_distance(input1: Vec<i32>, input2: Vec<i32>) -> i32 {
+fn calc_distance(input1: &Vec<i32>, input2: &Vec<i32>) -> i32 {
     let mut distance = 0;
     for i in 0..input1.len() {
         distance += (input1[i] - input2[i]).abs();
     }
     distance
+}
+
+fn calc_sim_score(input1: &Vec<i32>, input2: &Vec<i32>) -> i32 {
+    let mut sim_score = 0;
+
+    let mut input2_occurrence = std::collections::HashMap::new();
+    for i in 0..input2.len() {
+        let count = input2_occurrence.entry(input2[i]).or_insert(0);
+        *count += 1;
+    }
+
+    for i in 0..input1.len() {
+        let occur = match input2_occurrence.get(&input1[i]) {
+            Some(o) => o,
+            None => &0,
+        };
+        sim_score += occur * input1[i];
+    }
+    sim_score
 }
