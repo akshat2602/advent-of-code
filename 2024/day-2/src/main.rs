@@ -18,11 +18,27 @@ fn main() {
 
     let count = levels
         .iter()
-        .map(|level| check_level(&level))
+        .map(|level| check_level_with_damp(&level))
         .filter(|x| *x)
         .count();
 
     println!("{:?}", count);
+}
+
+fn check_level_with_damp(level_input: &Vec<i32>) -> bool {
+    let mut check_vec = Vec::new();
+    if !check_level(level_input) {
+        for i in 0..level_input.iter().count() {
+            let mut new_input = level_input.clone();
+            new_input.remove(i);
+            check_vec.push(check_level(&new_input))
+        }
+        if check_vec.iter().filter(|x| **x).count() == 0 {
+            return false;
+        }
+    }
+
+    true
 }
 
 fn check_level(level_input: &Vec<i32>) -> bool {
