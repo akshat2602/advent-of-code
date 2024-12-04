@@ -12,7 +12,7 @@ fn get_input(input: &str) -> (Vec<i32>, Vec<i32>) {
 }
 
 fn main() {
-    let path = std::path::Path::new("2024/day-1/input.txt");
+    let path = std::path::Path::new("input.txt");
     let input = std::fs::read_to_string(path).unwrap();
 
     let (input1, input2) = get_input(&input);
