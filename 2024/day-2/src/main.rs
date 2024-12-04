@@ -16,13 +16,20 @@ fn main() {
 
     let levels = get_input(&input);
 
-    let count = levels
+    let count_with_deletion = levels
         .iter()
         .map(|level| check_level_with_damp(&level))
         .filter(|x| *x)
         .count();
 
-    println!("{:?}", count);
+    let count = levels
+        .iter()
+        .map(|level| check_level(&level))
+        .filter(|x| *x)
+        .count();
+
+    println!("Count with deletion: {:?}", count_with_deletion);
+    println!("Count without deletion: {:?}", count);
 }
 
 fn check_level_with_damp(level_input: &Vec<i32>) -> bool {
