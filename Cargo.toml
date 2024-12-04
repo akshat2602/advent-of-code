@@ -7,7 +7,11 @@ edition = "2021"
 name = "2024-day-1"
 path = "2024/day-1/src/main.rs"
 
+[[bin]]
+name = "2024-day-2"
+path = "2024/day-2/src/main.rs"
+
 [workspace]
 members = [
-    "2024/day-1",
+    "2024/day-1", "2024/day-2",
 ]
