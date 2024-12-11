@@ -1,0 +1,117 @@
+checking for 0
+checking idx: 0
+length to be found: 4
+checking j: 1
+found: 1
+checking j: 2
+found: 2
+checking j: 3
+found: 3
+checking j: 4
+found: 4
+checking idx: 1
+length to be found: 3
+checking j: 2
+found: 1
+checking j: 3
+found: 2
+checking j: 4
+found: 3
+checking idx: 2
+length to be found: 2
+checking j: 3
+found: 1
+checking j: 4
+found: 2
+checking idx: 3
+length to be found: 1
+checking j: 4
+found: 1
+checking idx: 4
+length to be found: 0
+pushing: 0
+checking for 1
+checking idx: 0
+length to be found: 4
+checking j: 1
+found: 1
+checking j: 2
+found: 2
+checking j: 3
+found: 3
+checking j: 4
+found: 4
+checking idx: 1
+length to be found: 3
+checking j: 2
+found: 1
+checking j: 3
+found: 2
+checking j: 4
+found: 3
+checking idx: 2
+length to be found: 2
+checking j: 3
+found: 1
+checking j: 4
+found: 2
+checking idx: 3
+length to be found: 1
+checking j: 4
+found: 1
+checking idx: 4
+length to be found: 0
+checking for 2
+checking idx: 0
+length to be found: 2
+checking j: 1
+found: 1
+checking j: 2
+found: 2
+checking idx: 1
+length to be found: 1
+checking j: 2
+found: 1
+checking idx: 2
+length to be found: 0
+checking for 3
+checking idx: 0
+length to be found: 4
+checking j: 1
+found: 0
+checking j: 2
+found: 1
+checking j: 3
+found: 2
+checking j: 4
+found: 3
+checking idx: 1
+length to be found: 3
+checking j: 2
+found: 1
+checking j: 3
+found: 2
+checking j: 4
+found: 3
+checking idx: 2
+length to be found: 2
+checking j: 3
+found: 1
+checking j: 4
+found: 2
+checking idx: 3
+length to be found: 1
+checking j: 4
+found: 1
+checking idx: 4
+length to be found: 0
+checking for 4
+checking idx: 0
+length to be found: 2
+checking j: 1
+found: 1
+checking j: 2
+found: 2
+checking idx: 1
+length to be found: 1
+checking j: 2
